@@ -7,6 +7,8 @@
 
 ## Usage
 
+ZCamera是一款仿微信的相机和图片选择控件
+
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
