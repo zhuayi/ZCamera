@@ -14,11 +14,23 @@
 
 @protocol ZCameraViewDelegate <NSObject>
 
+/**
+ *  从图库中选择N 张图片后调用
+ *
+ *  @param imageArry
+ */
 - (void)didSendPhotoWithImageArray:(NSArray *)imageArry;
 
+/**
+ *  选取一张拍摄后的照片后调用
+ *
+ *  @param image
+ */
 - (void)didSendPhotoWidthImage:(UIImage *)image;
 
-
+/**
+ *  取消选择图片时调用
+ */
 - (void)didDismissViewController;
 
 
