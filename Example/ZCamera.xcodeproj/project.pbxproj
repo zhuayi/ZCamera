@@ -621,7 +621,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: meijun wang (N3ZQ98T863)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: meijun wang (N3ZQ98T863)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZCamera/ZCamera-Prefix.pch";
 				INFOPLIST_FILE = "ZCamera/ZCamera-Info.plist";
@@ -629,7 +630,7 @@
 				MACH_O_TYPE = mh_execute;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "9e82ea7b-23de-4e5c-84eb-2473eeb826e5";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -641,7 +642,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Beijing Baidu Netcom Science & Technology Co.,Ltd.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Beijing Baidu Netcom Science & Technology Co.,Ltd.";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZCamera/ZCamera-Prefix.pch";
 				INFOPLIST_FILE = "ZCamera/ZCamera-Info.plist";
@@ -649,7 +651,7 @@
 				MACH_O_TYPE = mh_execute;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "fc5ee3a6-8edf-4878-aafa-a52c458a35de";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};

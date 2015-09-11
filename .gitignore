@@ -18,7 +18,7 @@ profile
 DerivedData
 *.hmap
 *.ipa
-
+output/
 # Bundler
 .bundle
 
