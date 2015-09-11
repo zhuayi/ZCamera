@@ -13,7 +13,8 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
-![enter image description here](https://raw.githubusercontent.com/zhuayi/ZCamera/master/screenshots.gif)
+![enter image description here](https://raw.githubusercontent.com/zhuayi/ZCamera/master/screenshots.gif)![enter image description here](https://raw.githubusercontent.com/zhuayi/ZCamera/master/screenshots1.gif)![enter image description here](https://raw.githubusercontent.com/zhuayi/ZCamera/master/screenshots2.gif)![enter image description here](https://raw.githubusercontent.com/zhuayi/ZCamera/master/screenshots3.gif)
+
 
 ## Example
 

@@ -20,11 +20,17 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    UIButton *button2 = [[UIButton alloc] initWithFrame:CGRectMake(100, 200, 100, 30)];
+    UIButton *button2 = [[UIButton alloc] initWithFrame:CGRectMake(30, 200, 100, 30)];
     button2.backgroundColor = [UIColor redColor];
-    [button2 setTitle:@"拍照" forState:UIControlStateNormal];
+    [button2 setTitle:@"多选拍照" forState:UIControlStateNormal];
     [self.view addSubview:button2];
     [button2 addTarget:self action:@selector(gotoCamera) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(200, 200, 100, 30)];
+    button.backgroundColor = [UIColor redColor];
+    [button setTitle:@"单选拍照" forState:UIControlStateNormal];
+    [self.view addSubview:button];
+    [button addTarget:self action:@selector(gotoCamera2) forControlEvents:UIControlEventTouchUpInside];
     
 }
 
@@ -36,6 +42,17 @@
     camera.delegate = self;
     camera.maximum = 9;
     camera.threshold = 7;
+    [camera show];
+}
+
+- (void)gotoCamera2 {
+    
+    ZCameraViewManager *camera = [[ZCameraViewManager alloc] init];
+        camera.allowsEditing = YES;
+        camera.multiple = NO;
+    camera.delegate = self;
+//    camera.maximum = 9;
+//    camera.threshold = 7;
     [camera show];
 }
 
