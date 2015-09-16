@@ -65,8 +65,7 @@ static int forKey = 0;
             [self addSubview:_controllerView];
             
             UIImageView *buttonView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, AutoSize(150))];
-
-            buttonView.image = [UIImage imageWithContentsOfFile:[[NSBundle bundleWithIdentifier:@"ZCamera"] pathForResource:@"ZCamera" ofType:@".png"]];
+            buttonView.image = [UIImage imageNamed:@"CameraBg"];
             buttonView.userInteractionEnabled = YES;
             [_controllerView addSubview:buttonView];
             

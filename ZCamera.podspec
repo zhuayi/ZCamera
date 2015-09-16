@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "ZCamera"
-  s.version          = "1.0.1"
+  s.version          = "1.1.0"
   s.summary          = "ZCamera是一款仿微信的相机和图片选择控件"
 
 
@@ -25,9 +25,8 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes/**/*'
-  s.resource_bundles = {
-    'ZCamera' => ['Pod/Assets/*.png']
-  }
+  s.resources = 'Pod/Assets/*'
+
 
   s.public_header_files = 'Pod/Classes/**/*.h'
   s.dependency 'MWPhotoBrowser', '2.1.1'
