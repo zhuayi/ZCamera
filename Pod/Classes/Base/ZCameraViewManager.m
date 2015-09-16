@@ -156,16 +156,15 @@ static int forKey = 0;
 
 - (void)goToCameraView:(BOOL)allowsEditing sourceType:(UIImagePickerControllerSourceType)sourceType {
     
-    ZCameraImagePickerViewController * cameraImagePicker = [[ZCameraImagePickerViewController alloc] init];
-    cameraImagePicker.cameraDelegate = _delegate;
-    cameraImagePicker.allowsEditing = allowsEditing;
-    cameraImagePicker.sourceType = sourceType;
-    
-    if (![cameraImagePicker checkCameraAvailable]) {
+    if (![UIImagePickerController isSourceTypeAvailable:sourceType]) {
         NSLog(@"相机不可用!");
         [_delegate didPhotoLibraryUnavailable];
         return;
     }
+    ZCameraImagePickerViewController * cameraImagePicker = [[ZCameraImagePickerViewController alloc] init];
+    cameraImagePicker.cameraDelegate = _delegate;
+    cameraImagePicker.allowsEditing = allowsEditing;
+    cameraImagePicker.sourceType = sourceType;
     
     [UIView animateWithDuration:0.2 animations:^{
         
@@ -209,9 +208,6 @@ static int forKey = 0;
         
         [self goToCameraView:_allowsEditing sourceType:UIImagePickerControllerSourceTypePhotoLibrary];
     }
-    
-    
-    
 }
 
 /**
