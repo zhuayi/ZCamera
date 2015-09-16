@@ -12,6 +12,7 @@
 #import "ZCameraImageModel.h"
 #import "ZMacro.h"
 #import "UIView+Util.h"
+#import "UIImage+MWPhotoBrowser.h"
 
 @implementation ZCameraViewManager {
     
@@ -34,7 +35,7 @@ static int forKey = 0;
 {
     self = [super init];
     if (self) {
-
+        
         self.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
         self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.4];
         
@@ -55,7 +56,7 @@ static int forKey = 0;
                              @"selector": @"dismissViewControllerAnimated"
                              },
                          ];
-
+        
         
         if (_controllerView == nil) {
             
@@ -64,7 +65,7 @@ static int forKey = 0;
             [self addSubview:_controllerView];
             
             UIImageView *buttonView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, AutoSize(150))];
-            buttonView.image = [UIImage imageNamed:@"CameraBg"];
+            buttonView.image = [UIImage imageForResourcePath:@"CameraBg" ofType:@".png" inBundle:[NSBundle bundleForClass:[self class]]];
             buttonView.userInteractionEnabled = YES;
             [_controllerView addSubview:buttonView];
             
@@ -85,7 +86,7 @@ static int forKey = 0;
             }
         }
         
-       
+        
         _rootViewController = [[[UIApplication sharedApplication] keyWindow] rootViewController];
         
         // 默认多选
@@ -145,12 +146,12 @@ static int forKey = 0;
     } completion:^(BOOL finished) {
         
     }];
-
+    
 }
 
 - (void)goToCameraView {
     
-    [self goToCameraView:NO sourceType:UIImagePickerControllerSourceTypeCamera];
+    [self goToCameraView:_allowsEditing sourceType:UIImagePickerControllerSourceTypeCamera];
 }
 
 - (void)goToCameraView:(BOOL)allowsEditing sourceType:(UIImagePickerControllerSourceType)sourceType {
@@ -206,7 +207,7 @@ static int forKey = 0;
         }];
     } else {
         
-        [self goToCameraView:YES sourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+        [self goToCameraView:_allowsEditing sourceType:UIImagePickerControllerSourceTypePhotoLibrary];
     }
     
     

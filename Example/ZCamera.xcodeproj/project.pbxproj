@@ -632,6 +632,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "9e82ea7b-23de-4e5c-84eb-2473eeb826e5";
 				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -653,6 +654,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "fc5ee3a6-8edf-4878-aafa-a52c458a35de";
 				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
