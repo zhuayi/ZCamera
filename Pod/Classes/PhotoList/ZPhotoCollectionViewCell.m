@@ -32,8 +32,8 @@
         if (_selectButton == nil) {
             
             _selectButton = [[UIButton alloc] initWithFrame:CGRectMake(frame.size.width - AutoSize(22), AutoSize(2), AutoSize(20), AutoSize(20))];
-            [_selectButton setBackgroundImage:[UIImage imageForResourcePath:@"CameraSelect" ofType:@".png" inBundle:[NSBundle bundleForClass:[self class]]] forState:UIControlStateNormal];
-            [_selectButton setBackgroundImage:[UIImage imageForResourcePath:@"CameraSelectHigh" ofType:@".png" inBundle:[NSBundle bundleForClass:[self class]]] forState:UIControlStateSelected];
+            [_selectButton setBackgroundImage:[UIImage imageForResourcePath:@"CameraSelect" ofType:@".png" inBundle:[NSBundle bundleWithIdentifier:@"ZCamera"]] forState:UIControlStateNormal];
+            [_selectButton setBackgroundImage:[UIImage imageForResourcePath:@"CameraSelectHigh" ofType:@".png" inBundle:[NSBundle bundleWithIdentifier:@"ZCamera"]] forState:UIControlStateSelected];
             [self addSubview:_selectButton];
             
             [_selectButton addTarget:self action:@selector(setSelect:) forControlEvents:UIControlEventTouchUpInside];
