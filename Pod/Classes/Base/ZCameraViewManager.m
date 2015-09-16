@@ -158,7 +158,13 @@ static int forKey = 0;
     
     if (![UIImagePickerController isSourceTypeAvailable:sourceType]) {
         NSLog(@"相机不可用!");
-        [_delegate didPhotoLibraryUnavailable];
+        
+        if (sourceType == UIImagePickerControllerSourceTypePhotoLibrary) {
+            [_delegate didPhotoLibraryUnavailable];
+        } else {
+            [_delegate didCameraUnavailable];
+        }
+        
         return;
     }
     ZCameraImagePickerViewController * cameraImagePicker = [[ZCameraImagePickerViewController alloc] init];
