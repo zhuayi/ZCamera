@@ -70,4 +70,13 @@ typedef void(^ImageBlock)(NSArray *imageArray);
  */
 + (void)getImageFullScreenWithArray:(NSArray *)imageOriginalArray imageArray:(ImageBlock)imageArray;
 
+/**
+ *  直接打开相机
+ */
+- (void)goToCameraView;
+
+/**
+ *  直接打开图库
+ */
+- (void)goToPhotoLibrary;
 @end

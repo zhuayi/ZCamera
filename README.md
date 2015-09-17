@@ -25,12 +25,25 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 #import "ZCameraViewManager.h"
 ```
 
+打开遮罩选择图库
 ```objectice-c
 ZCameraViewManager *camera = [[ZCameraViewManager alloc] init];
 camera.delegate = self;
 [camera show];
 ```
+直接打开图库
+```objectice-c
+ZCameraViewManager *camera = [[ZCameraViewManager alloc] init];
+camera.delegate = self;
+[camera goToPhotoLibrary];
+```
 
+直接打开相机
+```objectice-c
+ZCameraViewManager *camera = [[ZCameraViewManager alloc] init];
+camera.delegate = self;
+[camera goToCameraView];
+```
 ###可选参数
 
 是否多选, 默认 yes
