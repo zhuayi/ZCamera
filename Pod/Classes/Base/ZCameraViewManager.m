@@ -172,7 +172,7 @@ static int forKey = 0;
     cameraImagePicker.allowsEditing = allowsEditing;
     cameraImagePicker.sourceType = sourceType;
     cameraImagePicker.mediaTypes = @[kUTType];
-    cameraImagePicker.videoMaximumDuration = 10.0f;
+    cameraImagePicker.videoMaximumDuration = _videoMaximumDuration;
     
     [UIView animateWithDuration:0.2 animations:^{
         
