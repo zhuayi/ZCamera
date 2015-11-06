@@ -13,7 +13,6 @@
 #import "ZMacro.h"
 #import "UIView+Util.h"
 #import "UIImage+MWPhotoBrowser.h"
-#import "ZCameraVideoViewController.h"
 
 @implementation ZCameraViewManager {
     
