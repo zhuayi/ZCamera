@@ -8,8 +8,14 @@
 
 //#import "BaseViewController.h"
 #import "ZCameraDelegate.h"
+#import <AVFoundation/AVFoundation.h>
+#import <MobileCoreServices/UTCoreTypes.h>
+#import <MediaPlayer/MediaPlayer.h>
+#import <CoreMedia/CoreMedia.h>
 
 typedef void(^ImageBlock)(NSArray *imageArray);
+
+
 
 @interface ZCameraViewManager : UIView
 
@@ -37,6 +43,16 @@ typedef void(^ImageBlock)(NSArray *imageArray);
  *  多选图片最大值
  */
 @property (nonatomic, assign) NSInteger maximum;
+
+/**
+ *  视频录制时间
+ */
+@property (nonatomic, assign) NSTimeInterval videoMaximumDuration;
+
+/**
+ *  视频质量
+ */
+@property(nonatomic) NSString *qualityType;
 
 /**
  *  显示
@@ -71,6 +87,17 @@ typedef void(^ImageBlock)(NSArray *imageArray);
 + (void)getImageFullScreenWithArray:(NSArray *)imageOriginalArray imageArray:(ImageBlock)imageArray;
 
 /**
+ *  视频转码
+ *
+ *  @param inputURL   源视频地址
+ *  @param outputURL  输出地址
+ *  @param presetName 压缩质量, AVAssetExportPresetMediumQuality
+ *  @param handler
+ */
++ (void)getVideoTranscodMp4WithUrl:(NSURL*)inputURL outputURL:(NSURL*)outputURL presetName:(NSString *)presetName blockHandler:(void (^)(AVAssetExportSession *session))handler;
+
+
+/**
  *  直接打开相机
  */
 - (void)goToCameraView;
@@ -79,4 +106,10 @@ typedef void(^ImageBlock)(NSArray *imageArray);
  *  直接打开图库
  */
 - (void)goToPhotoLibrary;
+
+/**
+ *  打开录像控制器
+ */
+- (void)goToVideoView;
+
 @end

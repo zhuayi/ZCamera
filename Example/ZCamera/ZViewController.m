@@ -33,6 +33,14 @@
     [self.view addSubview:button3];
     [button3 addTarget:self action:@selector(goToPhotoLibrary) forControlEvents:UIControlEventTouchUpInside];
     
+    
+    UIButton *button4 = [[UIButton alloc] initWithFrame:CGRectMake(200, 300, 100, 30)];
+    button4.backgroundColor = [UIColor redColor];
+    [button4 setTitle:@"录像" forState:UIControlStateNormal];
+    [self.view addSubview:button4];
+    [button4 addTarget:self action:@selector(goToVideoView) forControlEvents:UIControlEventTouchUpInside];
+    
+    
     UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(200, 200, 100, 30)];
     button.backgroundColor = [UIColor redColor];
     [button setTitle:@"单选拍照" forState:UIControlStateNormal];
@@ -73,6 +81,15 @@
     [camera show];
 }
 
+- (void)goToVideoView {
+    
+    NSLog(@"goToVideoView");
+    ZCameraViewManager *camera = [[ZCameraViewManager alloc] init];
+    camera.delegate = self;
+    [camera goToVideoView];
+
+}
+
 #pragma mark - CameraDelegate
 
 /**
@@ -94,6 +111,46 @@
 - (void)didSendPhotoWidthImage:(UIImage *)image {
     
     NSLog(@"image %@", image);
+}
+
+- (void)didSendVideoUrl:(NSURL *)url {
+    
+    NSDateFormatter* formater = [[NSDateFormatter alloc] init];
+    [formater setDateFormat:@"yyyy-MM-dd-HH:mm:ss"];
+    NSString *mp4Path = [NSHomeDirectory() stringByAppendingFormat:@"/Documents/output-%@.mp4", [formater stringFromDate:[NSDate date]]];
+    NSLog(@"mp4Path is %@: %lld", mp4Path, [self fileSizeAtPath:[[url absoluteString] substringFromIndex:16]]);
+    [ZCameraViewManager getVideoTranscodMp4WithUrl:url outputURL:[NSURL fileURLWithPath:mp4Path] presetName:AVAssetExportPresetMediumQuality blockHandler:^(AVAssetExportSession *session) {
+        
+        switch ([session status]) {
+            case AVAssetExportSessionStatusFailed:
+            {
+                NSLog(@"error : %@", [[session error] localizedDescription]);
+            }
+                
+            case AVAssetExportSessionStatusCancelled:
+                NSLog(@"Export canceled");
+                
+                break;
+            case AVAssetExportSessionStatusCompleted:
+                NSLog(@"Successful!===== %lld", [self fileSizeAtPath:mp4Path]);
+                break;
+            default:
+                break;
+        }
+    }];
+    
+    
+}
+
+- (long long) fileSizeAtPath:(NSString*) filePath{
+    
+    NSFileManager* manager = [NSFileManager defaultManager];
+    
+    if ([manager fileExistsAtPath:filePath]){
+        
+        return [[manager attributesOfItemAtPath:filePath error:nil] fileSize];
+    }
+    return 0;
 }
 
 - (void)didPhotoLibraryUnavailable {

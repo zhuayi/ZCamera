@@ -8,8 +8,12 @@
 
 #import "ZCameraImagePickerViewController.h"
 #import <AVFoundation/AVFoundation.h>
+#import <MobileCoreServices/UTCoreTypes.h>
 
-@implementation ZCameraImagePickerViewController
+@implementation ZCameraImagePickerViewController {
+    
+    UIActivityIndicatorView *_activity;
+}
 
 - (instancetype)init
 {
@@ -23,7 +27,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    _activity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    _activity.frame = CGRectMake(140, 80, 30, 30);
+    _activity.center = self.view.center;
+    [self.view addSubview:_activity];
+    
     
 }
 
@@ -31,7 +40,6 @@
  *  检查相机是否可用
  */
 - (BOOL)checkCameraAvailable {
-    
     
     AVAuthorizationStatus authStatus = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
     if (authStatus == AVAuthorizationStatusRestricted || authStatus ==AVAuthorizationStatusDenied) {
@@ -61,13 +69,37 @@
  *  @param info
  */
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
-    [picker dismissViewControllerAnimated:YES completion:^{}];
-    UIImage *image = [info objectForKey:UIImagePickerControllerEditedImage];
-    if (image == nil)
-        image = [info objectForKey:UIImagePickerControllerOriginalImage];
     
-    UIImageWriteToSavedPhotosAlbum(image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
+    NSString *mediaType=[info objectForKey:UIImagePickerControllerMediaType];
+ 
+    NSURL *mediaUrl = [info objectForKey:UIImagePickerControllerMediaURL];
     
+    [_activity startAnimating];
+
+    NSLog(@"info : %@", info);
+    // 视频
+    if ([mediaType isEqualToString:(NSString *)kUTTypeMovie]) {
+        
+        [self video:picker videoUrl:mediaUrl];
+        
+    } else if ([mediaType isEqualToString:(NSString *)kUTTypeImage]) {
+        
+        UIImage *image = [info objectForKey:UIImagePickerControllerEditedImage];
+        if (image == nil) {
+            
+            image = [info objectForKey:UIImagePickerControllerOriginalImage];
+        }
+        [_cameraDelegate didSendPhotoWidthImage:image];
+        [_activity stopAnimating];
+        [self dismissViewControllerAnimated:YES completion:^{}];
+    }
+    
+}
+
+- (void)video:(UIImagePickerController *)picker videoUrl:(NSURL *)videoUrl {
+    
+    [_activity stopAnimating];
+    [_cameraDelegate didSendVideoUrl:videoUrl];
 }
 
 - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo {
@@ -81,7 +113,6 @@
         
         NSLog(@"Error: %@", error);
     }
-    
 }
 
 - (void)dealloc {

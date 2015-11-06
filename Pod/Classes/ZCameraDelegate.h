@@ -28,6 +28,14 @@
  */
 - (void)didSendPhotoWidthImage:(UIImage *)image;
 
+
+/**
+ *  视频地址
+ *
+ *  @param url
+ */
+- (void)didSendVideoUrl:(NSURL *)url;
+
 /**
  *  取消选择图片时调用
  */

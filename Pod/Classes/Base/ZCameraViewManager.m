@@ -13,6 +13,7 @@
 #import "ZMacro.h"
 #import "UIView+Util.h"
 #import "UIImage+MWPhotoBrowser.h"
+#import "ZCameraVideoViewController.h"
 
 @implementation ZCameraViewManager {
     
@@ -151,10 +152,10 @@ static int forKey = 0;
 
 - (void)goToCameraView {
     
-    [self goToCameraView:_allowsEditing sourceType:UIImagePickerControllerSourceTypeCamera];
+    [self goToCameraView:_allowsEditing sourceType:UIImagePickerControllerSourceTypeCamera kUTType:(NSString *)kUTTypeImage];
 }
 
-- (void)goToCameraView:(BOOL)allowsEditing sourceType:(UIImagePickerControllerSourceType)sourceType {
+- (void)goToCameraView:(BOOL)allowsEditing sourceType:(UIImagePickerControllerSourceType)sourceType kUTType:(NSString *)kUTType{
     
     if (![UIImagePickerController isSourceTypeAvailable:sourceType]) {
         NSLog(@"相机不可用!");
@@ -171,6 +172,8 @@ static int forKey = 0;
     cameraImagePicker.cameraDelegate = _delegate;
     cameraImagePicker.allowsEditing = allowsEditing;
     cameraImagePicker.sourceType = sourceType;
+    cameraImagePicker.mediaTypes = @[kUTType];
+    cameraImagePicker.videoMaximumDuration = 10.0f;
     
     [UIView animateWithDuration:0.2 animations:^{
         
@@ -182,6 +185,14 @@ static int forKey = 0;
         [_rootViewController presentViewController:cameraImagePicker animated:YES completion:nil];
         
     }];
+}
+
+/**
+ *  打开录像控制器
+ */
+- (void)goToVideoView {
+    
+    [self goToCameraView:_allowsEditing sourceType:UIImagePickerControllerSourceTypeCamera kUTType:(NSString *)kUTTypeMovie];
 }
 
 - (void)goToPhotoLibrary {
@@ -212,7 +223,7 @@ static int forKey = 0;
         }];
     } else {
         
-        [self goToCameraView:_allowsEditing sourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+        [self goToCameraView:_allowsEditing sourceType:UIImagePickerControllerSourceTypePhotoLibrary kUTType:(NSString *)kUTTypeImage];
     }
 }
 
@@ -307,6 +318,29 @@ static int forKey = 0;
         forKey = 0;
         
     }];
+}
+
+/**
+ *  视频转码
+ *
+ *  @param inputURL   源视频地址
+ *  @param outputURL  输出地址
+ *  @param presetName 压缩质量, AVAssetExportPresetMediumQuality
+ *  @param handler
+ */
++ (void)getVideoTranscodMp4WithUrl:(NSURL*)inputURL outputURL:(NSURL*)outputURL presetName:(NSString *)presetName blockHandler:(void (^)(AVAssetExportSession *session))handler {
+    
+    NSLog(@"inputURL is %@, outputURL is %@", inputURL, outputURL);
+    
+    AVURLAsset *asset = [AVURLAsset URLAssetWithURL:inputURL options:nil];
+    
+    AVAssetExportSession *session = [[AVAssetExportSession alloc] initWithAsset:asset presetName:presetName];
+    session.outputURL = outputURL;
+    session.outputFileType = AVFileTypeMPEG4;
+    session.shouldOptimizeForNetworkUse = YES;
+    [session exportAsynchronouslyWithCompletionHandler:^(void) {
+         handler(session);
+     }];
 }
 
 - (void)dealloc {
