@@ -30,7 +30,7 @@ Pod::Spec.new do |s|
 
   s.public_header_files = 'Pod/Classes/**/*.h'
   s.dependency 'MWPhotoBrowser', '~> 2.1.1'
-  s.dependency 'ZComponent/ZBaseViewController', '~> 0.2.0'
-  s.dependency 'ZComponent/Category', '~> 0.2.0'
-  s.dependency 'ZComponent/ZMacro', '~> 0.2.0'
+  s.dependency 'ZComponent/ZBaseViewController'
+  s.dependency 'ZComponent/Category'
+  s.dependency 'ZComponent/ZMacro'
 end
