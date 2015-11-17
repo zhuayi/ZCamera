@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "ZCamera"
-  s.version          = "1.1.2"
+  s.version          = "1.1.3"
   s.summary          = "ZCamera是一款仿微信的相机和图片选择控件"
 
 
@@ -30,7 +30,7 @@ Pod::Spec.new do |s|
 
   s.public_header_files = 'Pod/Classes/**/*.h'
   s.dependency 'MWPhotoBrowser', '~> 2.1.1'
-  s.dependency 'ZComponent/ZBaseViewController', '~> 0.1.0'
-  s.dependency 'ZComponent/Category', '~> 0.1.0'
-  s.dependency 'ZComponent/ZMacro', '~> 0.1.0'
+  s.dependency 'ZComponent/ZBaseViewController', '~> 0.2.0'
+  s.dependency 'ZComponent/Category', '~> 0.2.0'
+  s.dependency 'ZComponent/ZMacro', '~> 0.2.0'
 end
