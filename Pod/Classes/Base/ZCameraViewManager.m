@@ -278,8 +278,9 @@ static int forKey = 0;
     //    __block int key2 = key;
     [assetLibrary assetForURL:imageOriginalArray[forKey] resultBlock:^(ALAsset *asset)  {
         
-        //fullScreenImage
-        //        [asset respondsToSelector:@selector(type)];
+        if (!asset) {
+            return ;
+        }
         
         if ([type isEqualToString:@"fullImage"]) {
             
