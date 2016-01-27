@@ -34,9 +34,8 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
-		66B2DD8B654674FBBF6873FB /* libPods-ZCamera_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33DF35F1D2E73FDAA035A4F7 /* libPods-ZCamera_Tests.a */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
-		AD95B9299A637B18FB787C22 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 850903E8E52DFAFFFC426476 /* libPods.a */; };
+		CA93242FC9F28FFF5E49870C /* libPods-ZCamera_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0165CAF94ED620CADB248E06 /* libPods-ZCamera_Example.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,10 +49,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		23CF4D5614D569ED9630678F /* Pods-ZCamera_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZCamera_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZCamera_Example/Pods-ZCamera_Example.release.xcconfig"; sourceTree = "<group>"; };
+		0165CAF94ED620CADB248E06 /* libPods-ZCamera_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZCamera_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FCC781BAB27459440C074C6 /* Pods-ZCamera_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZCamera_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZCamera_Example/Pods-ZCamera_Example.release.xcconfig"; sourceTree = "<group>"; };
 		24833B3B8C127204E3FF4E09 /* ZCamera.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ZCamera.podspec; path = ../ZCamera.podspec; sourceTree = "<group>"; };
-		26FD528FD6F5FC9E52A2A15E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		33DF35F1D2E73FDAA035A4F7 /* libPods-ZCamera_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZCamera_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		38924F601BA16229000E82CC /* CameraBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CameraBg.png; sourceTree = "<group>"; };
 		38924F611BA16229000E82CC /* CameraBg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CameraBg@2x.png"; sourceTree = "<group>"; };
 		38924F621BA16229000E82CC /* CameraSelect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CameraSelect.png; sourceTree = "<group>"; };
@@ -98,11 +96,8 @@
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		6B47B2D6A1AF11384C73C64D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		7D972F361BA4AA657FF58539 /* Pods-ZCamera_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZCamera_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZCamera_Example/Pods-ZCamera_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		850903E8E52DFAFFFC426476 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C91E00F03F310BCCE94FC2C /* Pods-ZCamera_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZCamera_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZCamera_Example/Pods-ZCamera_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		A57E9DC54E2226F89BFACEC9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		BD00EE495436DFE4FA6737F1 /* Pods_ZCamera_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZCamera_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,7 +108,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				AD95B9299A637B18FB787C22 /* libPods.a in Frameworks */,
+				CA93242FC9F28FFF5E49870C /* libPods-ZCamera_Example.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,13 +119,21 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				66B2DD8B654674FBBF6873FB /* libPods-ZCamera_Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		37145DCEDB2E7EF4433F4510 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7C91E00F03F310BCCE94FC2C /* Pods-ZCamera_Example.debug.xcconfig */,
+				0FCC781BAB27459440C074C6 /* Pods-ZCamera_Example.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		38924F5E1BA16229000E82CC /* Pod */ = {
 			isa = PBXGroup;
 			children = (
@@ -226,7 +229,7 @@
 				6003F5B5195388D20070C39A /* Tests */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
-				C614DFF0B8C4CBECC72E3BCA /* Pods */,
+				37145DCEDB2E7EF4433F4510 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -246,9 +249,7 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				33DF35F1D2E73FDAA035A4F7 /* libPods-ZCamera_Tests.a */,
-				BD00EE495436DFE4FA6737F1 /* Pods_ZCamera_Example.framework */,
-				850903E8E52DFAFFFC426476 /* libPods.a */,
+				0165CAF94ED620CADB248E06 /* libPods-ZCamera_Example.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -309,17 +310,6 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		C614DFF0B8C4CBECC72E3BCA /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				7D972F361BA4AA657FF58539 /* Pods-ZCamera_Example.debug.xcconfig */,
-				23CF4D5614D569ED9630678F /* Pods-ZCamera_Example.release.xcconfig */,
-				A57E9DC54E2226F89BFACEC9 /* Pods.debug.xcconfig */,
-				26FD528FD6F5FC9E52A2A15E /* Pods.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -327,12 +317,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "ZCamera_Example" */;
 			buildPhases = (
-				AFA1049566E2A69DBA3CE3B6 /* Check Pods Manifest.lock */,
+				1564BA5660D45F430E166235 /* Check Pods Manifest.lock */,
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				BBD104BE8F17991BF12D54FD /* Copy Pods Resources */,
-				006370EA64330F312725EB17 /* Embed Pods Frameworks */,
+				AB50A7B11D1DC052B6F1C663 /* Embed Pods Frameworks */,
+				20A927017DFA4A5FF8473F13 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -347,11 +337,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "ZCamera_Tests" */;
 			buildPhases = (
-				D44855F194A08066899B5F75 /* Check Pods Manifest.lock */,
 				6003F5AA195388D20070C39A /* Sources */,
 				6003F5AB195388D20070C39A /* Frameworks */,
 				6003F5AC195388D20070C39A /* Resources */,
-				3FF8A66B267560699E5284E5 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -428,7 +416,37 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		006370EA64330F312725EB17 /* Embed Pods Frameworks */ = {
+		1564BA5660D45F430E166235 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		20A927017DFA4A5FF8473F13 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZCamera_Example/Pods-ZCamera_Example-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AB50A7B11D1DC052B6F1C663 /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -440,67 +458,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		3FF8A66B267560699E5284E5 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZCamera_Tests/Pods-ZCamera_Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AFA1049566E2A69DBA3CE3B6 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		BBD104BE8F17991BF12D54FD /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D44855F194A08066899B5F75 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZCamera_Example/Pods-ZCamera_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -637,12 +595,13 @@
 		};
 		6003F5C0195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A57E9DC54E2226F89BFACEC9 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 7C91E00F03F310BCCE94FC2C /* Pods-ZCamera_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZCamera/ZCamera-Prefix.pch";
 				INFOPLIST_FILE = "ZCamera/ZCamera-Info.plist";
@@ -660,12 +619,13 @@
 		};
 		6003F5C1195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 26FD528FD6F5FC9E52A2A15E /* Pods.release.xcconfig */;
+			baseConfigurationReference = 0FCC781BAB27459440C074C6 /* Pods-ZCamera_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZCamera/ZCamera-Prefix.pch";
 				INFOPLIST_FILE = "ZCamera/ZCamera-Info.plist";

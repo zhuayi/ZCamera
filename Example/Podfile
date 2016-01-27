@@ -2,8 +2,12 @@ source 'https://github.com/CocoaPods/Specs.git'
 #use_frameworks!
 platform :ios, '7.0'
 
-#target 'ZCamera_Example', :exclusive => true do
-pod 'MWPhotoBrowser', '2.1.1'
+target 'ZCamera_Example' do
+
+pod 'MBProgressHUD+BWMExtension', '~> 1.0.0'
+pod 'MWPhotoBrowser', '2.1.1', :inhibit_warnings => true
 pod 'ZComponent', :subspecs => ['ZMacro','Category','ZBaseViewController']
-    #end
+
+
+end
 

@@ -29,6 +29,7 @@ Pod::Spec.new do |s|
 
 
   s.public_header_files = 'Pod/Classes/**/*.h'
+  s.dependency 'MBProgressHUD+BWMExtension', '~> 1.0.0'
   s.dependency 'MWPhotoBrowser', '~> 2.1.1'
   s.dependency 'ZComponent/ZBaseViewController'
   s.dependency 'ZComponent/Category'
