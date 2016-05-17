@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "ZCamera"
-  s.version          = "1.1.4"
+  s.version          = "1.1.5"
   s.summary          = "ZCamera是一款仿微信的相机和图片选择控件"
 
 

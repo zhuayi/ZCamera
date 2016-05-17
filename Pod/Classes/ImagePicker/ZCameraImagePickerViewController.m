@@ -89,9 +89,12 @@
             
             image = [info objectForKey:UIImagePickerControllerOriginalImage];
         }
-        [_cameraDelegate didSendPhotoWidthImage:image];
         [_activity stopAnimating];
-        [self dismissViewControllerAnimated:YES completion:^{}];
+        [self dismissViewControllerAnimated:YES completion:^{
+        
+            [_cameraDelegate didSendPhotoWidthImage:image];
+            
+        }];
     }
     
 }

@@ -16,7 +16,6 @@ PODS:
   - ZComponent/ZMacro (0.3.0)
 
 DEPENDENCIES:
-  - MBProgressHUD (~> 0.9.1)
   - MBProgressHUD+BWMExtension (~> 1.0.0)
   - MWPhotoBrowser (= 2.1.1)
   - ZComponent/Category
@@ -31,6 +30,4 @@ SPEC CHECKSUMS:
   SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
   ZComponent: 73a81d8a5ca8280dd03f280a9e2547082ed4a6ec
 
-PODFILE CHECKSUM: c7222b506808e4ff8c2e8ad86f5cfc271b7644cd
-
-COCOAPODS: 1.0.0.beta.2
+COCOAPODS: 0.39.0
